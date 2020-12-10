@@ -76,8 +76,11 @@ def respond(voice_data) :
 
     #misc queries
     if 'open command' in voice_data :
-        speak('Spawning Command Shell') 
-        os.system("start cmd.exe")
+        if os.name == 'nt' : 
+            speak('Spawning Command Shell') 
+            os.system("start cmd.exe")
+        else : 
+            speak("I cannot access the linux command system at the moment")
 
     if 'get videos' in voice_data : 
         speak('What video topic you want ? ')
