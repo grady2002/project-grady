@@ -55,6 +55,10 @@ def respond(voice_data) :
     if 'what time is it' in voice_data : 
         speak(ctime())
 
+    if 'what is the weather' in voice_data : 
+        speak('Fetching weather details')
+        webbrowser.get().open('https://www.google.com/search?q=current+weather')
+
     #internet queries
     if 'find' in voice_data :
         speak('What do you wanna find ?')
@@ -62,6 +66,10 @@ def respond(voice_data) :
         url = 'https://google.com/search?q=' + search
         speak("Searching " + search)
         webbrowser.get().open(url)
+
+    if 'news' in voice_data : 
+        speak('Fetching News')
+        webbrowser.get().open('https://news.google.com/topstories?hl=en-IN&gl=IN&ceid=IN:en')
 
     if 'open exploit database' in voice_data : 
         speak("Opening Exploit Database")
@@ -73,6 +81,30 @@ def respond(voice_data) :
         url = 'https://google.com/maps/place/' + location + '/&amp;'
         speak('Locating ' + location)
         webbrowser.get().open(url)
+
+    if 'WhatsApp' in voice_data : 
+        speak('Opening Whatsapp')
+        webbrowser.get().open('https://web.whatsapp.com')
+
+    if 'Instagram' in voice_data : 
+        speak('Opening Instagram')
+        webbrowser.get().open('https://instagram.com')
+    
+    if 'Facebook' in voice_data : 
+        speak('Opening Faceebook')
+        webbrowser.get().open('https://facebook.com')
+
+    if 'drive' in voice_data : 
+        speak('Opening Google Drive')
+        webbrowser.get().open('https://drive.google.com')
+
+    if 'one drive' in voice_data : 
+        speak('Opening Microsoft One Drive')
+        webbrowser.get().open('https://onedrive.live.com/')
+
+    if 'meet' in voice_data : 
+        speak('Opening Google Meet')
+        webbrowser.get().open('https://meet.google.com')
 
     #misc queries
     if 'open command' in voice_data :
