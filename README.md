@@ -26,7 +26,7 @@ Desktop assistant personally for me <br><br>
 
 <br>
 
-### Installing Dependancies
+### Running Project
 
 <ul>
     <li>
