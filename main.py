@@ -2,9 +2,10 @@ import speech_recognition as sr
 import os
 import time
 import webbrowser
+import playsound
+import sys
 from time import ctime
 from gtts import gTTS
-import playsound
 
 r = sr.Recognizer()
 
@@ -25,6 +26,13 @@ def speak(text) :
         os.system('rm voice.mp3')
 
 speak('Hello Master Grady !')
+time.sleep(1)
+speak('Identifying System, Please wait')
+time.sleep(2)
+if os.name == 'nt' : 
+    speak('Windows NT detected')
+else : 
+    speak('Linux System detected, some commands may not work properly')
 
 def record_audio(ask = False) : 
     with sr.Microphone() as source : 
@@ -106,7 +114,6 @@ def respond(voice_data) :
         speak('Opening Google Meet')
         webbrowser.get().open('https://meet.google.com')
 
-    #misc queries
     if 'open command' in voice_data :
         if os.name == 'nt' : 
             speak('Spawning Command Shell') 
@@ -124,6 +131,19 @@ def respond(voice_data) :
     if 'upload code' in voice_data :
         speak('Opening Github')
         webbrowser.get().open('https://github.com/')
+
+    #misc queries
+    if 'take notes' in voice_data : 
+        speak('Taking Notes')
+        if os.name == 'nt' : 
+            os.system('start notepad.exe')
+        else : 
+            speak('I cannot access the Linux file system at the moment')
+
+    if 'exit' in voice_data : 
+        speak('Bye and thanks for choosing me')
+        time.sleep(1)
+        sys.exit()
 
 time.sleep(1)
 clear()
