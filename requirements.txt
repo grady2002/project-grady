@@ -2,4 +2,3 @@ speechrecognition
 pyttsx3
 gTTS
 playsound
-pyaudio
