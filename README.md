@@ -1,12 +1,12 @@
 # Chizuru Assistant (Project Grady)
-Desktop assistant personally for me <br><br>
+Assisting the new generation, I present to you Chizuru Yukimura, A python desktop assistant for all your needs. <br>
 
 ## Installing dependancies & Requirements
-<b>Requires latest intsllation of Python3</b>
+<b>Requires latest installation of Python3</b>
 
 <hr>
 
-### Cloning the repository 
+#### Cloning the repository 
 
 <ul>
     <li>
@@ -14,9 +14,7 @@ Desktop assistant personally for me <br><br>
     </li>
 </ul>
 
-<br>
-
-### Installing Dependancies
+#### Installing Dependancies
 
 <ul>
     <li>
@@ -24,9 +22,7 @@ Desktop assistant personally for me <br><br>
     </li>
 </ul>
 
-<br>
-
-### Running Project
+#### Running The Script
 
 <ul>
     <li>

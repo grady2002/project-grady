@@ -25,14 +25,23 @@ def speak(text) :
     else : 
         os.system('rm voice.mp3')
 
-speak('Hello Master Grady !')
+time.sleep(1)
+speak('Starting voice recognition services, Please Wait')
+time.sleep(2)
+speak('what should I call you ?')
+masterName = input(' What should I Call You ? ')
+greet = 'Hello Master ' + masterName
+speak(greet)
 time.sleep(1)
 speak('Identifying System, Please wait')
 time.sleep(2)
 if os.name == 'nt' : 
-    speak('Windows NT detected')
+    speak('Detected System as Microsoft Windows')
 else : 
     speak('Linux System detected, some commands may not work properly')
+
+clear()
+speak('you can now leave me running in the background and i will keep responding to your voice commands.')
 
 def record_audio(ask = False) : 
     with sr.Microphone() as source : 
@@ -146,7 +155,6 @@ def respond(voice_data) :
         sys.exit()
 
 time.sleep(1)
-clear()
 while(1) : 
     speak('Waiting for your command ...')
     voice_data = record_audio()
