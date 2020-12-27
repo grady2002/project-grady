@@ -1,12 +1,14 @@
-# Chizuru Assistant (Project Grady)
-Assisting the new generation, I present to you Chizuru Yukimura, A python desktop assistant for all your needs. <br>
+# Olivia Assistant (Project Grady)
+
+Assisting the new generation, I present to you Olivia, A python desktop assistant for all your needs. <br>
 
 ## Installing dependancies & Requirements
+
 <b>Requires latest installation of Python3</b>
 
 <hr>
 
-#### Cloning the repository 
+#### Cloning the repository
 
 <ul>
     <li>
